@@ -30,6 +30,14 @@ class OS {
 		echo self::$name;
 	}
 
+	public function install() {
+		echo 'Installing packages for ' . self::$name;
+	}
+
+	public function remove() {
+		echo 'Removing packages for ' . self::$name;
+	}
+
 }
 
 function __autoload( $class ) {
@@ -40,5 +48,7 @@ function __autoload( $class ) {
 
 $a = OS::get_instance();
 $a->name();
+$a->install();
+$a->remove();
 
 ?>
