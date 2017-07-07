@@ -1,0 +1,39 @@
+#!/usr/bin/php
+<?php
+
+define ( 'EE_BASE', __DIR__ );
+require_once 'helper.php';
+
+if ( ( 4 === $argc || 3 === $argc ) ) {
+
+	require_once get_plugin_dir() . '/PackageManager.php';
+
+	PackageManager::load_plugins();
+
+	$package = $argv[2];
+	$os = '';
+
+	if ( 4 === $argc && preg_match( '/^--os=/', $argv[3], $match ) ) {
+		$os = substr( $argv[3], strlen( '--os=' ) );
+	}
+
+	$manager = PackageManager::get_instance( $os );
+
+	switch ( $argv[1] ) {
+		case 'install':
+			$manager->install( $package );
+			break;
+
+		case 'update':
+			$manager->update( $package );
+			break;
+
+		case 'remove':
+			$manager->remove( $package );
+			break;
+
+		default:
+			echo 'Undefined action requested!';
+	}
+
+}
