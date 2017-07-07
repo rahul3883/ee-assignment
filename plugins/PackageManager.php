@@ -31,7 +31,7 @@ abstract class PackageManager {
 
 	}
 
-	public static function get_manager( $os ) {
+	private static function get_manager( $os ) {
 
 		if ( empty( $os ) ) {
 			$os = self::get_current_os();
@@ -45,8 +45,7 @@ abstract class PackageManager {
 			$obj = new $manager;
 
 			if ( $obj->serves( $os ) ) {
-				$instance = $obj;
-				return $instance;
+				return $obj;
 			}
 		}
 
@@ -82,6 +81,10 @@ abstract class PackageManager {
 
 	private static function get_current_os() {
 		return php_uname( 's' );
+	}
+
+	protected static function line( $str ) {
+		echo $str . "\n";
 	}
 
 }

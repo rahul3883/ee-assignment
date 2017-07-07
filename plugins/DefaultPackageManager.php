@@ -7,15 +7,15 @@ class DefaultPackageManager extends PackageManager {
 	}
 
 	public function install( $package ) {
-		echo "Can't Install {$package}, Package Manager is not available for this OS.\n";
+		PackageManager::line( "Can't Install {$package}, Package Manager is not available for this OS." );
 	}
 
 	public function update( $package ) {
-		echo "Can't Update {$package}, Package Manager is not available for this OS.\n";
+		PackageManager::line( "Can't Update {$package}, Package Manager is not available for this OS." );
 	}
 
 	public function remove( $package ) {
-		echo "Can't Remove {$package}, Package Manager is not available for this OS.\n";
+		PackageManager::line( "Can't Remove {$package}, Package Manager is not available for this OS." );
 	}
 
 }

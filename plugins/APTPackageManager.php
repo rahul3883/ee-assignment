@@ -10,15 +10,15 @@ class APTPackageManager extends PackageManager {
 	}
 
 	public function install( $package ) {
-		echo "Installing {$package} using APT...\n";
+		PackageManager::line( "Installing {$package} using APT..." );
 	}
 
 	public function update( $package ) {
-		echo "Updating {$package} using APT...\n";
+		PackageManager::line( "Updating {$package} using APT..." );
 	}
 
 	public function remove( $package ) {
-		echo "Removing {$package} using APT...\n";
+		PackageManager::line( "Removing {$package} using APT..." );
 	}
 
 	private function get_supported_os() {

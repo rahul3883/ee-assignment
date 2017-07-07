@@ -10,15 +10,15 @@ class PKGPackageManager extends PackageManager {
 	}
 
 	public function install( $package ) {
-		echo "Installing {$package} using PKG...\n";
+		PackageManager::line( "Installing {$package} using PKG..." );
 	}
 
 	public function update( $package ) {
-		echo "Updating {$package} using PKG...\n";
+		PackageManager::line( "Updating {$package} using PKG..." );
 	}
 
 	public function remove( $package ) {
-		echo "Removing {$package} using PKG...\n";
+		PackageManager::line( "Removing {$package} using PKG..." );
 	}
 
 	private function get_supported_os() {

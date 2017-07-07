@@ -10,15 +10,15 @@ class BrewPackageManager extends PackageManager {
 	}
 
 	public function install( $package ) {
-		echo "Installing {$package} using HomeBrew...\n";
+		PackageManager::line( "Installing {$package} using HomeBrew..." );
 	}
 
 	public function update( $package ) {
-		echo "Updating {$package} using HomeBrew...\n";
+		PackageManager::line( "Updating {$package} using HomeBrew..." );
 	}
 
 	public function remove( $package ) {
-		echo "Removing {$package} using HomeBrew...\n";
+		PackageManager::line( "Removing {$package} using HomeBrew..." );
 	}
 
 	private function get_supported_os() {
