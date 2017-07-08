@@ -1,0 +1,13 @@
+{
+    "name": "rahul/ee-assignment",
+    "description": "An assignment for Easy Engine",
+    "type": "metapackage",
+    "authors": [
+        {
+            "name": "Rahul Soni",
+            "email": "rahul.soni3883@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
