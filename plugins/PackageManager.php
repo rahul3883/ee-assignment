@@ -28,7 +28,6 @@ abstract class PackageManager {
 				}
 			}
 		}
-
 	}
 
 	private static function get_manager( $os ) {
@@ -50,7 +49,6 @@ abstract class PackageManager {
 		}
 
 		return false;
-
 	}
 
 	private static function managers_in( $dir ) {

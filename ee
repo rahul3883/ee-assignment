@@ -4,9 +4,10 @@
 define ( 'EE_BASE', __DIR__ );
 
 require_once 'helper.php';
-require_once get_plugin_dir() . '/PackageManager.php';
 
 if ( 3 === $argc || 4 === $argc ) {
+
+	require_once get_plugin_dir() . '/PackageManager.php';
 
 	PackageManager::load_plugins();
 
@@ -35,5 +36,4 @@ if ( 3 === $argc || 4 === $argc ) {
 		default:
 			echo "Undefined action requested!\n";
 	}
-
 }
